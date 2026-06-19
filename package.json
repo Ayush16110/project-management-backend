@@ -1,0 +1,15 @@
+{
+    "name": "project-management",
+    "version": "1.0.0",
+    "description": "a project management software for beginners",
+    "license": "ISC",
+    "author": "Ayush16110",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "dev": "node index.js"
+    },
+    "devDependencies": {
+        "prettier": "3.8.4"
+    }
+}
