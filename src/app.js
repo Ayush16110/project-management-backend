@@ -20,8 +20,10 @@ app.use(
 
 // Import routes
 import healthCheckRouter from "./routes/healthcheck.routes.js";
+import authRoutes from "./routes/auth.routes.js";
 
 app.use("/api/v1/healthcheck", healthCheckRouter);
+app.use("/api/v1/auth/", authRoutes);
 
 app.get("/", (req, res) => {
     res.send("Welcome to the Project Management Platform!");
