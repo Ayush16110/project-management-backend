@@ -22,4 +22,58 @@ const userRegisterValidator = () => {
     ];
 };
 
-export { userRegisterValidator };
+const userLoginValidator = () => {
+    return [
+        body("email")
+            .trim()
+            .notEmpty()
+            .withMessage("Email is required")
+            .isEmail()
+            .withMessage("Invalid Emaill"),
+
+        body("username").trim().optional(),
+
+        body("password").trim().notEmpty().withMessage("Password is required"),
+    ];
+};
+
+const userChangeCurrentPasswordValidator = () => {
+    return [
+        body("oldPassword")
+            .trim()
+            .notEmpty()
+            .withMessage("Password is required"),
+        body("newPassword")
+            .trim()
+            .notEmpty()
+            .withMessage("Password is required"),
+    ];
+};
+
+const userForgotPasswordValidator = () => {
+    return [
+        body("email")
+            .trim()
+            .notEmpty()
+            .withMessage("Email is required")
+            .isEmail()
+            .withMessage("Invalid Emaill"),
+    ];
+};
+
+const userResetForgotPasswordValidator = () => {
+    return [
+        body("newPassword")
+            .trim()
+            .notEmpty()
+            .withMessage("Password is required"),
+    ];
+};
+
+export {
+    userRegisterValidator,
+    userLoginValidator,
+    userChangeCurrentPasswordValidator,
+    userForgotPasswordValidator,
+    userResetForgotPasswordValidator,
+};
