@@ -32,8 +32,4 @@ app.get("/", (req, res) => {
     res.send("Welcome to the Project Management Platform!");
 });
 
-app.get("/instagram", (req, res) => {
-    res.send("This is a Instagram Page...");
-});
-
 export default app;
